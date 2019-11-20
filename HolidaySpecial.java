@@ -1,7 +1,7 @@
 /**
  * HolidaySpecial
- * Author: Carolyn Yao, Student: Choun H. Lee and Divya Samaroo
- * Does this compile or finish running within 5 seconds? Y/N
+ * Author: Carolyn Yao, Students: Choun H. Lee and Divya Samaroo
+ * Does this compile or finish running within 5 seconds? Y/N = Answer: Yes
  */
 
 /**
@@ -41,6 +41,8 @@ public class HolidaySpecial {
     //************************************************************************************************
     // Our code begins here
     // array to check remaining steps. 0 means not done, 1 means done
+    long startTime = System.nanoTime();
+    
     int finishedSteps[] = new int[numSteps + 1];
     int remainingSteps = 0;
     for (int i = 1; i < finishedSteps.length; i++)
@@ -119,6 +121,9 @@ public class HolidaySpecial {
 		topChef = 0;
     }
     
+    
+    System.out.println("Total Runtime of our portion of code is: " +
+    		((System.nanoTime() - startTime)) + " nanoseconds");
     // end of our code
     //************************************************************************************************
 
