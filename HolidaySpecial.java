@@ -1,6 +1,6 @@
 /**
  * HolidaySpecial
- * Author: Carolyn Yao, Students: Choun H. Lee and Divya Samaroo
+ * Author: Carolyn Yao, Students: Choun H. Lee, Divya Samaroo, Kenneth Hill, Mohammed Rahat
  * Does this compile or finish running within 5 seconds? Y/N = Answer: Yes
  */
 
@@ -54,7 +54,7 @@ public class HolidaySpecial {
     
     // greedy algorithm below
     int consecSeq = 0, counter = 0, previousStep = 0, maxCount = 0, topChef = 0, topChefCounter = 0,
-    		topChefStart = 0, lastStep = 0, topChefSeq = 0;
+    		topChefStart = 0, lastStep = 0, topChefSeq = 0, previousChef = 0;
     
     // algorithm continues as long as remaining steps remain
     while (remainingSteps > 0) {
@@ -97,28 +97,31 @@ public class HolidaySpecial {
     			topChef = i;
     			topChefSeq = consecSeq;
     			topChefStart = lastStep - topChefCounter;
-    		}else 
+    		} 
     		// resetting counter
         	counter = 0;
         	consecSeq = 0;
         	maxCount = 0;
     	}
-    	// assigning top chef to the schedule, and eliminate steps to do
-    	for(int i = topChefStart; i < topChefStart + topChefCounter; i++)
-    	{
-    		if(signUpTable[topChef][i] == 1)
-    		{
-    			finishedSteps[i] = 1;
-    			scheduleTable[topChef][i] = 1;
-    		}
+    	if (previousChef != topChef){
+    	   	// assigning top chef to the schedule, and eliminate steps to do
+        	for(int i = topChefStart; i < topChefStart + topChefCounter; i++)
+        	{
+        		if(signUpTable[topChef][i] == 1)
+        		{
+        			finishedSteps[i] = 1;
+        			scheduleTable[topChef][i] = 1;
+        		}
+        	}
+        	// subtract remaining steps with steps done by our top chef
+        	remainingSteps -= topChefCounter;
+        	
+        	// reset chef counter to pick next chef
+        	topChefCounter = 0;
+    		topChef = 0;
     	}
-    	
-    	// subtract remaining steps with steps done by our top chef
-    	remainingSteps -= topChefCounter;
-    	
-    	// reset chef counter to pick next chef
-    	topChefCounter = 0;
-		topChef = 0;
+    	previousChef = topChef;
+
     }
     
     
