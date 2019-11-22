@@ -13,28 +13,25 @@ public class RunningTrials {
 	  	// Beginning of our code
 	  	
 	  	/* Note: I found the same example on Wikipedia of the Egg Drop Puzzle. 
-	  	 * And this puzzle sucks. The story doesn't explain the logic behind the code properly
+	  	 * I think this puzzle is too vague. The story doesn't explain the logic behind the code properly
 	  	 * especially the part where if 1 egg is available, you check all the floors. That only adds to
 	  	 * confusion. Logically, minimum test you can run should be only 1, because if the egg breaks 
 	  	 * at the first attempt, there's no need to test anymore, and since the story appears to be
 	  	 * we are taking in all possibility into consideration, the MINIMUM amongst all possibility IS 1
-	  	 * I think this is just awful example to use as a project, and I just cannot imagine
-	  	 * any student willing to put actual work into this assignment as logical fallacy of the question
-	  	 * will only bring confusion to most of the students. The question forces most of us to google 
-	  	 * this problem for the sake of getting some kind of context. I'd suggest giving students different 
-	  	 * Dynamic Programming problem in the future. This is probably a good example of DP in order to 
-	  	 * memorize for the preparation of job interview questions, so it might be a good example 
-	  	 * to cover during class lecture as an example of DP, but leaving students to do this on their own
-	  	 * is practically forcing them to research the material in order to get some kind of context to 
-	  	 * understand the logic behind the story and algorithm. If any interview ever gives this DP as 
-	  	 * interview question, I'd consider any interviewer a complete failure, as this problem will never
-	  	 * test anyone in critical thinking, but if they have seen this problem in the past or not.
+	  	 * I think this is just poor choice as assignment as students are more or less forced to research
+		 * this problem to even get firm grasp of what the problem is asking for. 
+		 * I'd suggest giving students different Dynamic Programming problem in the future. This is probably 
+		 * a good example of DP in order to memorize for the preparation of job interview questions, so 
+		 * it might be a good example to cover during class lecture as an example of DP, but leaving students 
+		 * to do this on their own is practically forcing them to research the material in order to get 
+		 * some kind of context to understand the logic behind the story and algorithm, which in essence is the
+		 * answer to the question, robbing students chance to apply critical thinking and practice DP
 	  	 * - Choun
 	  	 * */
 	  	
 	  	// If there is less than 1 possible speeds, only 1 test required 
 	  	if(possibleSpeeds <= 1)
-	        return days;
+	        return possibleSpeeds;
 	    
 	  	// If there is only 1 day test all possible speeds
 	    if(days == 1)
