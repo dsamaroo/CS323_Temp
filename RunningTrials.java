@@ -1,6 +1,6 @@
 /**
  * Running Trials
- * Author: Carolyn Yao, Students: Choun H. Lee, Divya Samaroo, Kenneth Hill, Mohammed Rahat
+ * Author: Carolyn Yao, Students: Choun H. Lee, Divya Samaroo(1:40PM SECTION), Kenneth Hill, Mohammed Rahat
  * Does this compile or finish running within 5 seconds? Y/N Yes
  */
 
@@ -12,21 +12,12 @@ public class RunningTrials {
 	  	//*******************************************************************************************************
 	  	// Beginning of our code
 	  	
-	  	/* Note: I found the same example on Wikipedia of the Egg Drop Puzzle. 
-	  	 * I think this puzzle is too vague. The story doesn't explain the logic behind the code properly
-	  	 * especially the part where if 1 egg is available, you check all the floors. That only adds to
-	  	 * confusion. Logically, minimum test you can run should be only 1, because if the egg breaks 
-	  	 * at the first attempt, there's no need to test anymore, and since the story appears to be
-	  	 * we are taking in all possibility into consideration, the MINIMUM amongst all possibility IS 1
-	  	 * I think this is just poor choice as assignment as students are more or less forced to research
-		 * this problem to even get firm grasp of what the problem is asking for. 
-		 * I'd suggest giving students different Dynamic Programming problem in the future. This is probably 
-		 * a good example of DP in order to memorize for the preparation of job interview questions, so 
-		 * it might be a good example to cover during class lecture as an example of DP, but leaving students 
-		 * to do this on their own is practically forcing them to research the material in order to get 
-		 * some kind of context to understand the logic behind the story and algorithm, which in essence is the
-		 * answer to the question, robbing students chance to apply critical thinking and practice DP
-	  	 * - Choun
+	  	/* Note: I found the same example on Wikipedia of the Egg Drop Puzzle. There was also a helpful link on geeksforgeeks
+	  	 * The source for geeksforgeeks is : https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
+	  	 * We used these sources to help us better understand the problem because we were really confused. 
+	  	 * The source for wikipedia is : https://en.wikipedia.org/wiki/Dynamic_programming
+	  	 
+	  	 * - Choun Lee
 	  	 * */
 	  	
 	  	// If there is less than 1 possible speeds, only 1 test required 

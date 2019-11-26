@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 /**
  * LeagueOfPatience
- * Author: Carolyn Yao, Students: Choun H. Lee, Divya Samaroo, Kenneth Hill, Mohammed Rahat
+ * Author: Carolyn Yao, Students: Choun H. Lee, Divya Samaroo(1:40PM SECTION), Kenneth Hill, Mohammed Rahat
  * Does this compile or finish running within 5 seconds? Y/N
  */
 
